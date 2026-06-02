@@ -101,7 +101,7 @@ function onLeaveText() {
 }
 
 function bindInteractives() {
-  var els = document.querySelectorAll('.nav-link.magnetic');
+  var els = document.querySelectorAll('.nav-link.magnetic, .footer-text');
   els.forEach(function(el) {
     el.addEventListener('mouseenter', onEnterInteractive);
     el.addEventListener('mouseleave', onLeaveInteractive);
