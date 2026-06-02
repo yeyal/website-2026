@@ -101,7 +101,7 @@ function onLeaveText() {
 }
 
 function bindInteractives() {
-  var els = document.querySelectorAll('a, button, .project-name, .nav-link, .nav-photo, .footer-email');
+  var els = document.querySelectorAll('.nav-link.magnetic');
   els.forEach(function(el) {
     el.addEventListener('mouseenter', onEnterInteractive);
     el.addEventListener('mouseleave', onLeaveInteractive);
