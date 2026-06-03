@@ -3,134 +3,121 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yfat Eyal — Staff Product Designer</title>
+<title>Yfat Eyal — Product Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <!-- NAV -->
-<header id="header">
-  <div class="nav-left">
-    <div class="nav-name">Yfat Eyal</div>
-    <div class="nav-title">Staff Product Designer</div>
+<nav id="nav">
+  <a href="index.html" class="nav-name nav-link">Yfat Eyal</a>
+  <div class="nav-links">
+    <a href="#work" class="nav-link">Work</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="playground.html" class="nav-link">Playground</a>
+    <a href="mailto:eyalyfat@gmail.com" class="nav-link">Contact</a>
   </div>
-  <div class="nav-mid">
-    <a href="mailto:eyalyfat@gmail.com" class="nav-link magnetic">eyalyfat@gmail.com</a>
-    <a href="#" class="nav-link magnetic">linkedin</a>
-  </div>
-  <div class="nav-right">
-    <img class="nav-skull" src="skull.png" alt="">
-  </div>
-</header>
+</nav>
 
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-left">
-    <p class="hero-label">Selected work</p>
-    <p class="hero-date">2015 — Present</p>
-  </div>
-  <h1 class="hero-statement">Hi — I'm Yfat, a Product Designer at Reality Labs.</h1>
+  <h1 class="hero-text">Hi — I'm Yfat, Staff Product Designer at Meta</h1>
 </section>
 
-<!-- MONTAGE -->
-<section id="montage">
-  <video autoplay loop muted playsinline>
-    <source src="videos/montage.mp4" type="video/mp4">
-  </video>
-  <div class="montage-placeholder">Drop montage.mp4 into videos/</div>
-</section>
-
-<!-- BIO -->
-<section id="bio">
-  <p class="bio-text">Staff Product Designer at Meta Reality Labs, designing at the intersection of AI and operating systems — from multimodal assistants to display glasses to agentic OS design. Comfortable navigating ambiguity, stakeholder complexity, and product spaces that don't have a playbook yet.</p>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="projects-grid">
-
-    <!-- Row 1: tall left + short right -->
-    <div class="project project-tall" data-reveal>
-      <div class="project-label">
-        <a href="display.html" class="project-link">Ray-Ban Meta Display</a>
-      </div>
-      <div class="project-desc-hover">
-        <p class="project-desc-text">Leading product design for Meta's first display glasses — defining the OS, interaction model, and system UX from concept through launch.</p>
-      </div>
-      <div class="project-media project-media-tall">
-        <video autoplay loop muted playsinline>
-          <source src="videos/display.mp4" type="video/mp4">
-        </video>
-      </div>
-    </div>
-
-    <div class="project-stack">
-      <div class="project" data-reveal>
-        <div class="project-label">
-          <a href="rayban.html" class="project-link">Ray-Ban Meta</a>
-        </div>
-        <div class="project-desc-hover">
-          <p class="project-desc-text">Defining the end-to-end experience for Meta's most successful wearable — camera, audio, AI, and daily use.</p>
-        </div>
-        <div class="project-media project-media-short">
-          <video autoplay loop muted playsinline>
-            <source src="videos/rayban.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-
-      <div class="project" data-reveal>
-        <div class="project-label">
-          <a href="assistant.html" class="project-link">Assistant</a>
-        </div>
-        <div class="project-desc-hover">
-          <p class="project-desc-text">Designing Meta AI's assistant across Portal, Ray-Ban Meta, and Quest — one voice, multiple devices.</p>
-        </div>
-        <div class="project-media project-media-short">
-          <video autoplay loop muted playsinline>
-            <source src="videos/assistant.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-
+<!-- WORK -->
+<section id="work">
+  <div class="section-label">
+    <span class="label-title">SELECTED WORK</span>
+    <span class="label-date">2015–PRESENT</span>
   </div>
 
-  <!-- Row 2: two equal columns -->
-  <div class="projects-row">
-    <div class="project" data-reveal>
-      <div class="project-label">
-        <a href="enterprise.html" class="project-link">Enterprise AI</a>
+  <div class="work-grid">
+    <div class="work-item" data-reveal>
+      <div class="work-media">
+        <video autoplay loop muted playsinline><source src="videos/display.mp4" type="video/mp4"></video>
       </div>
-      <div class="project-desc-hover">
-        <p class="project-desc-text">Leveraging AI to streamline Meta's internal asset operations — from vision to shipped product.</p>
-      </div>
-      <div class="project-media project-media-wide">
-        <div class="media-placeholder-bg"></div>
-      </div>
+      <h3 class="work-name">Ray-Ban Meta Display</h3>
+      <p class="work-desc">Defining the OS and system UX for Meta's first display glasses</p>
     </div>
 
-    <div class="project" data-reveal>
-      <div class="project-label">
-        <a href="commerce.html" class="project-link">AI Commerce</a>
+    <div class="work-item" data-reveal>
+      <div class="work-media">
+        <video autoplay loop muted playsinline><source src="videos/rayban.mp4" type="video/mp4"></video>
       </div>
-      <div class="project-desc-hover">
-        <p class="project-desc-text">Applying CV and NLU across Instagram and Meta's apps to reduce friction in shopping experiences.</p>
+      <h3 class="work-name">Ray-Ban Meta</h3>
+      <p class="work-desc">End-to-end experience for Meta's most successful wearable</p>
+    </div>
+
+    <div class="work-item" data-reveal>
+      <div class="work-media">
+        <video autoplay loop muted playsinline><source src="videos/assistant.mp4" type="video/mp4"></video>
       </div>
-      <div class="project-media project-media-wide">
-        <div class="media-placeholder-bg"></div>
+      <h3 class="work-name">Assistant</h3>
+      <p class="work-desc">Meta AI across Portal, Ray-Ban Meta, and Quest</p>
+    </div>
+
+    <div class="work-item" data-reveal>
+      <div class="work-media">
+        <div class="work-placeholder"></div>
       </div>
+      <h3 class="work-name">Enterprise AI</h3>
+      <p class="work-desc">AI-powered tools to streamline Meta's internal operations</p>
+    </div>
+
+    <div class="work-item" data-reveal>
+      <div class="work-media">
+        <div class="work-placeholder"></div>
+      </div>
+      <h3 class="work-name">AI Commerce</h3>
+      <p class="work-desc">CV and NLU across Instagram to reduce shopping friction</p>
+    </div>
+
+    <div class="work-item" data-reveal>
+      <div class="work-media">
+        <div class="work-placeholder"></div>
+      </div>
+      <h3 class="work-name">Stories in Emerging Markets</h3>
+      <p class="work-desc">Adapting Stories for low-bandwidth, high-growth regions</p>
     </div>
   </div>
-
 </section>
+
+<!-- MODAL -->
+<div id="modal" class="modal-overlay" onclick="if(event.target===this)closeModal()">
+  <div class="modal-card">
+    <button class="modal-close" onclick="closeModal()">&#x2715;</button>
+    <div class="modal-hero" id="modal-hero"></div>
+    <div class="modal-body">
+      <h2 class="modal-title" id="modal-title"></h2>
+      <div class="modal-meta">
+        <div class="modal-meta-col">
+          <span class="modal-label">Role</span>
+          <span class="modal-value" id="modal-role"></span>
+        </div>
+        <div class="modal-meta-col">
+          <span class="modal-label">Year</span>
+          <span class="modal-value" id="modal-year"></span>
+        </div>
+      </div>
+      <div class="modal-divider"></div>
+      <div id="modal-sections"></div>
+    </div>
+  </div>
+</div>
 
 <!-- FOOTER -->
 <footer id="footer">
-  <span class="footer-text">© 2026 Yfat Eyal. All rights reserved</span>
+  <div class="footer-top">
+    <h2 class="footer-heading">Let's work together</h2>
+    <a href="mailto:eyalyfat@gmail.com" class="footer-email">eyalyfat@gmail.com</a>
+    <p class="footer-location">Austin, TX</p>
+  </div>
 </footer>
 
-<div id="cursor-dot"></div>
+<div id="cursor-dot"><span class="cursor-label">VIEW</span></div>
 <script src="cursor.js"></script>
 <script src="app.js"></script>
 </body>
