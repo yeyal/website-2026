@@ -3,7 +3,7 @@ var projectData = {
   'Ray-Ban Meta Display': {
     role: 'Staff Product Designer',
     year: '2023–Present',
-    video: 'videos/hn.mp4',
+    video: 'videos/rayban-display.mp4',
     sections: [
       { label: 'Background', text: 'Meta set out to build its first consumer display glasses, a new product category with no precedent. It meant defining the system UX from 0→1 for an entirely new form factor: a monocular transparent display controlled by EMG gestures, voice, and captouch.' },
       { label: 'Role', text: 'Led the system UX design from early concept through market launch, defining the interaction model, information architecture, display logic, home surface, and navigation framework. As the Core UX lead, I was the connective glue across 10 domain teams, keeping the experience cohesive, holding a high quality bar, and guiding designs to meet both user needs and the product vision.' },
