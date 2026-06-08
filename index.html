@@ -6,25 +6,27 @@
 <title>Yfat Eyal — Product Designer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <!-- NAV -->
 <nav id="nav">
-  <a href="index.html" class="nav-name nav-link">Yfat Eyal</a>
+  <a href="index.html" class="nav-name">Yfat Eyal</a>
   <div class="nav-links">
     <a href="#work" class="nav-link">Work</a>
     <a href="about.html" class="nav-link">About</a>
     <a href="playground.html" class="nav-link">Playground</a>
-    <a href="mailto:eyalyfat@gmail.com" class="nav-link">Contact</a>
   </div>
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span>
+  </button>
 </nav>
 
 <!-- HERO -->
 <section id="hero">
-  <h1 class="hero-text">Hi — I'm Yfat, Staff Product Designer at Meta</h1>
+  <h1 class="hero-text">Product Designer at Reality Labs, designing wearable AI.</h1>
 </section>
 
 <!-- WORK -->
@@ -37,50 +39,34 @@
   <div class="work-grid">
     <div class="work-item" data-reveal>
       <div class="work-media">
-        <video autoplay loop muted playsinline><source src="videos/display.mp4" type="video/mp4"></video>
+        <video class="lazy-video" loop muted playsinline preload="none" poster="images/hn-poster.jpg"><source data-src="videos/hn.mp4" type="video/mp4"></video>
       </div>
       <h3 class="work-name">Ray-Ban Meta Display</h3>
-      <p class="work-desc">Defining the OS and system UX for Meta's first display glasses</p>
+      <p class="work-desc">Defining the OS-level UX for Meta's first display glasses</p>
     </div>
 
     <div class="work-item" data-reveal>
       <div class="work-media">
-        <video autoplay loop muted playsinline><source src="videos/rayban.mp4" type="video/mp4"></video>
-      </div>
-      <h3 class="work-name">Ray-Ban Meta</h3>
-      <p class="work-desc">End-to-end experience for Meta's most successful wearable</p>
-    </div>
-
-    <div class="work-item" data-reveal>
-      <div class="work-media">
-        <video autoplay loop muted playsinline><source src="videos/assistant.mp4" type="video/mp4"></video>
+        <video class="lazy-video" loop muted playsinline preload="none" poster="images/shorter-poster.jpg"><source data-src="videos/shorter.mp4" type="video/mp4"></video>
       </div>
       <h3 class="work-name">Assistant</h3>
-      <p class="work-desc">Meta AI across Portal, Ray-Ban Meta, and Quest</p>
+      <p class="work-desc">Designing voice and AI experiences for new Reality Labs hardware</p>
     </div>
 
     <div class="work-item" data-reveal>
       <div class="work-media">
-        <div class="work-placeholder"></div>
-      </div>
-      <h3 class="work-name">Enterprise AI</h3>
-      <p class="work-desc">AI-powered tools to streamline Meta's internal operations</p>
-    </div>
-
-    <div class="work-item" data-reveal>
-      <div class="work-media">
-        <div class="work-placeholder"></div>
+        <img src="images/ai-commerce.webp" alt="AI Commerce" loading="lazy" decoding="async">
       </div>
       <h3 class="work-name">AI Commerce</h3>
-      <p class="work-desc">CV and NLU across Instagram to reduce shopping friction</p>
+      <p class="work-desc">Optimizing buyer and seller experiences across Meta's family of apps with CV and NLU</p>
     </div>
 
     <div class="work-item" data-reveal>
       <div class="work-media">
-        <div class="work-placeholder"></div>
+        <img src="images/enterprise.webp" alt="Enterprise Products" loading="lazy" decoding="async">
       </div>
-      <h3 class="work-name">Stories in Emerging Markets</h3>
-      <p class="work-desc">Adapting Stories for low-bandwidth, high-growth regions</p>
+      <h3 class="work-name">Enterprise Products</h3>
+      <p class="work-desc">Automating asset tracking to streamline Meta's internal operations</p>
     </div>
   </div>
 </section>
@@ -120,5 +106,6 @@
 <div id="cursor-dot"><span class="cursor-label">VIEW</span></div>
 <script src="cursor.js"></script>
 <script src="app.js"></script>
+<script src="nav.js"></script>
 </body>
 </html>

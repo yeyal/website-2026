@@ -6,35 +6,40 @@
 <title>Playground — Yfat Eyal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <!-- NAV -->
 <nav id="nav">
-  <a href="index.html" class="nav-name nav-link">YE</a>
+  <a href="index.html" class="nav-name">Yfat Eyal</a>
   <div class="nav-links">
     <a href="index.html#work" class="nav-link">Work</a>
     <a href="about.html" class="nav-link">About</a>
     <a href="playground.html" class="nav-link">Playground</a>
-    <a href="mailto:eyalyfat@gmail.com" class="nav-link">Contact</a>
   </div>
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span>
+  </button>
 </nav>
 
 <!-- PLAYGROUND -->
 <section id="hero">
-  <h1 class="hero-text">Playground</h1>
-</section>
-
-<section style="padding: 0 var(--edge) 200px; color: var(--gray-2); font-size: 18px;">
-  <p>Coming soon — prototypes, experiments, and side projects.</p>
+  <h1 class="hero-text">Playground coming soon...</h1>
 </section>
 
 <!-- FOOTER -->
 <footer id="footer">
-  <span class="footer-copy">© Yfat Eyal 2026. All rights reserved</span>
+  <div class="footer-top">
+    <h2 class="footer-heading">Let's work together</h2>
+    <a href="mailto:eyalyfat@gmail.com" class="footer-email">eyalyfat@gmail.com</a>
+    <p class="footer-location">Austin, TX</p>
+  </div>
 </footer>
 
+<div id="cursor-dot"></div>
+<script src="cursor.js"></script>
+<script src="nav.js"></script>
 </body>
 </html>

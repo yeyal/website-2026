@@ -22,6 +22,9 @@ function tick() {
   } else if (isOnProject) {
     dot.style.left = (dotX - 60) + 'px';
     dot.style.top = (dotY - 60) + 'px';
+  } else if (dot.classList.contains('on-name') || dot.classList.contains('on-cowboy')) {
+    dot.style.left = (dotX - 22) + 'px';
+    dot.style.top = (dotY - 22) + 'px';
   } else {
     dot.style.left = (dotX - 10) + 'px';
     dot.style.top = (dotY - 10) + 'px';
@@ -56,6 +59,26 @@ document.querySelectorAll('.nav-link').forEach(function(el) {
     dot.style.width = '';
     dot.style.height = '';
     dot.dataset.navActive = '';
+  });
+});
+
+// Bind email hover — cursor becomes a waving hand
+document.querySelectorAll('.footer-email').forEach(function(el) {
+  el.addEventListener('mouseenter', function() {
+    dot.classList.add('on-name');
+  });
+  el.addEventListener('mouseleave', function() {
+    dot.classList.remove('on-name');
+  });
+});
+
+// Bind location hover — cursor becomes a cowboy
+document.querySelectorAll('.footer-location').forEach(function(el) {
+  el.addEventListener('mouseenter', function() {
+    dot.classList.add('on-cowboy');
+  });
+  el.addEventListener('mouseleave', function() {
+    dot.classList.remove('on-cowboy');
   });
 });
 
