@@ -25,18 +25,18 @@ var projectData = {
     year: '2020–2021',
     image: 'images/enterprise.webp',
     sections: [
-      { label: 'Background', text: 'Meta needed to streamline the accounting of its internal assets to fuel innovation and business growth.' },
-      { label: 'Role', text: 'Developed and launched a unified product vision leveraging AI to automate asset tracking, aligning engineering, finance, and operations stakeholders.' },
+      { label: 'Background', text: 'Finance and accounting teams managed Meta\'s financial activity across disparate tools and siloed documents. Manual prep consumed the time meant for analysis and storytelling, while growth kept compounding dependency and specialization across teams.' },
+      { label: 'Role', text: 'I drove the vision and strategy for a centralized, AI-driven platform: a "Digital Controllership" that surfaces financial insights and reduces the time, effort, and complexity of accounting, freeing teams for analysis while maintaining standardization at scale. I won exec leadership buy-in on the vision and delivered an iterative roadmap to realize it over time.' },
       { label: 'Impact', text: 'Shipped the first iteration, cutting the error rate from 13% to under 1%, automating 65% of batches to save ~252 hours/month, and reducing processing time.' }
     ]
   },
   'AI Commerce': {
     role: 'Product Designer',
     year: '2019–2020',
-    image: 'images/ai-commerce.webp',
+    image: 'images/ai-commerce-modal.webp',
     sections: [
-      { label: 'Background', text: 'Meta was applying product recognition and natural-language understanding across its family of apps to reduce friction in shopping.' },
-      { label: 'Role', text: 'Led cross-org design workshops across Instagram, WhatsApp, and Marketplace, applying CV and NLU to buyer and seller experiences.' },
+      { label: 'Background', text: 'Meta\'s AI Commerce team built the AI building blocks (computer vision, NLU) that product teams across the family of apps used to create shoppable experiences.' },
+      { label: 'Role', text: 'As a product designer on the team, I partnered directly with Instagram, Marketplace, and WhatsApp to turn CV and NLU into product opportunities, led AI ideation workshops, and pitched and aligned teams on experiences to launch together, focused on making everything shoppable, making shopping personal, and improving the seller experience.' },
       { label: 'Impact', text: 'Shipped AI-powered product tagging on Instagram, reversing a 33% decline into 30% growth. Sellers adopted the suggestions in ~15% of sessions, with reduced search friction.' }
     ]
   }
