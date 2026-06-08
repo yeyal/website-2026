@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Yfat Eyal — Product Designer</title>
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">🌵</text></svg>'>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -15,7 +16,7 @@
 <nav id="nav">
   <a href="index.html" class="nav-name">Yfat Eyal</a>
   <div class="nav-links">
-    <a href="#work" class="nav-link">Work</a>
+    <a href="index.html" class="nav-link">Work</a>
     <a href="about.html" class="nav-link">About</a>
     <a href="playground.html" class="nav-link">Playground</a>
   </div>
@@ -68,6 +69,22 @@
       <h3 class="work-name">Enterprise Products</h3>
       <p class="work-desc">Automating asset tracking to streamline Meta's internal operations</p>
     </div>
+
+    <div class="work-item" data-reveal>
+      <div class="work-media">
+        <img src="images/stories.webp" alt="Stories & Emerging Markets" loading="lazy" decoding="async">
+      </div>
+      <h3 class="work-name">Stories & Emerging Markets</h3>
+      <p class="work-desc">Adapting Stories for low-bandwidth, high-growth markets</p>
+    </div>
+
+    <div class="work-item" data-reveal>
+      <div class="work-media">
+        <img src="images/wix.webp" alt="Wix" loading="lazy" decoding="async">
+      </div>
+      <h3 class="work-name">Wix</h3>
+      <p class="work-desc">Built an IDE inside the Wix visual editor for advanced sites</p>
+    </div>
   </div>
 </section>
 
@@ -86,6 +103,10 @@
         <div class="modal-meta-col">
           <span class="modal-label">Year</span>
           <span class="modal-value" id="modal-year"></span>
+        </div>
+        <div class="modal-meta-col" id="modal-platform-col" style="display:none">
+          <span class="modal-label">Platform</span>
+          <span class="modal-value" id="modal-platform"></span>
         </div>
       </div>
       <div class="modal-divider"></div>

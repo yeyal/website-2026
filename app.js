@@ -39,6 +39,28 @@ var projectData = {
       { label: 'Role', text: 'As a product designer on the team, I partnered directly with Instagram, Marketplace, and WhatsApp to turn CV and NLU into product opportunities, led AI ideation workshops, and pitched and aligned teams on experiences to launch together, focused on making everything shoppable, making shopping personal, and improving the seller experience.' },
       { label: 'Impact', text: 'Shipped AI-powered product tagging on Instagram, reversing a 33% decline into 30% growth. Sellers adopted the suggestions in ~15% of sessions, with reduced search friction.' }
     ]
+  },
+  'Stories & Emerging Markets': {
+    role: 'Product Designer',
+    year: '2018–2019',
+    platform: 'Android, iOS, Jio',
+    image: 'images/stories-cover.webp',
+    sections: [
+      { label: 'Background', text: "Original sharing had been declining on Facebook for several years, with people feeling pressure to only share their best moments. Stories and its ephemerality reversed that trend, bringing sharing and app usage back into a growth pattern. My team focused on expanding Stories into emerging markets, which brought significant challenges of its own. I focused on identifying opportunities across both the production and consumption funnels, and building localized experiences specific to users in our key emerging markets." },
+      { label: 'Creative Formats', text: "A critical touchpoint affecting the production and consumption flywheel was the motivation and inspiration to share. Exploring how we might encourage people in emerging markets to share more, we found common problems: not knowing what to share, feeling they didn't have anything of interest to share, and fear of exposure (concerns that their images could be abused, or fear of retribution). I led design on multiple projects addressing these, including audio stories, synthetic content, localized education, and prompts to share. In parallel, I partnered with the creative team on localized production formats based on visual trends that resonated with specific regions (frames, stickers, effects, layout templates, and more).", img: 'images/stories-formats.webp' },
+      { label: 'Story Replies in Blue', text: "Another critical focus was retaining new and existing producers and preventing churn. Most users in our target markets used apps other than Messenger as their primary messaging tool, mainly WhatsApp. This created a major break in the production funnel: producers weren't receiving their feedback, and couldn't engage in conversations about it, because Messenger was siloed from the main app. Working with partner teams, I designed the Story Replies in Blue experience, bringing replies into the viewer sheet and letting people hold conversations on Stories directly. This eventually fed a larger initiative to reintegrate Messenger into the core app.", img: 'images/stories-journey.webp' },
+      { label: 'Relevant Platforms', text: "Devices and data are expensive in these markets, so we invested in customized Stories experiences for the platforms that mattered, including Facebook Lite and feature phones. This investment became a major growth driver for Stories. I drove the strategy and feature prioritization, and owned the entire Stories experience (camera, production, and consumption) on these platforms, creating production formats adapted to each platform's constraints and building and maintaining the new UI component library for them.", img: 'images/stories-platforms.webp' }
+    ]
+  },
+  'Wix': {
+    role: 'Product Designer',
+    year: '2015–2017',
+    image: 'images/wix-modal.webp',
+    sections: [
+      { label: 'Background', text: "Wix is a platform that lets people create their own professional web presence with ease, through a WYSIWYG visual editor. As part of a strategic move to reach a wider audience and offer a new level of advanced functionality, Wix launched a new integrated development environment that lets users build robust websites by managing data, customizing component behavior, and creating web applications." },
+      { label: 'Role', text: "As a 0→1 initiative, I owned the entire data connections domain (data binding, dynamic pages, and more), working in parallel and collaborating with multiple product teams from concept to launch. After a successful beta launch, the platform was eventually rebranded as Wix Velo." },
+      { label: 'Demo', embed: 'https://www.youtube.com/embed/rzReCvkI4gg?start=30' }
+    ]
   }
 };
 
@@ -60,14 +82,36 @@ function openModal(name) {
   document.getElementById('modal-role').textContent = data.role;
   document.getElementById('modal-year').textContent = data.year;
 
+  var platformCol = document.getElementById('modal-platform-col');
+  if (data.platform) {
+    document.getElementById('modal-platform').textContent = data.platform;
+    platformCol.style.display = '';
+  } else {
+    platformCol.style.display = 'none';
+  }
+
   var sections = document.getElementById('modal-sections');
   sections.innerHTML = '';
   data.sections.forEach(function(s) {
     var div = document.createElement('div');
     div.className = 'modal-section';
-    var body = s.bullets
-      ? '<ul class="modal-bullets">' + s.bullets.map(function(b){ return '<li>' + b + '</li>'; }).join('') + '</ul>'
-      : '<p class="modal-section-text">' + s.text + '</p>';
+    var body = '';
+    if (s.bullets) {
+      body += '<ul class="modal-bullets">' + s.bullets.map(function(b){ return '<li>' + b + '</li>'; }).join('') + '</ul>';
+    } else if (s.text) {
+      body += '<p class="modal-section-text">' + s.text + '</p>';
+    }
+    if (s.img) {
+      body += '<img class="modal-section-img" src="' + s.img + '" alt="' + s.label + '" loading="lazy">';
+    }
+    if (s.embed) {
+      var vidMatch = s.embed.match(/embed\/([^?]+)/);
+      var vid = vidMatch ? vidMatch[1] : '';
+      var playSrc = s.embed + (s.embed.indexOf('?') > -1 ? '&' : '?') + 'autoplay=1';
+      body += '<div class="modal-embed" data-src="' + playSrc + '">' +
+        (vid ? '<img class="modal-embed-thumb" src="https://img.youtube.com/vi/' + vid + '/hqdefault.jpg" alt="' + s.label + '">' : '') +
+        '<span class="modal-embed-play"></span></div>';
+    }
     div.innerHTML = '<div class="modal-section-label">' + s.label + '</div>' + body;
     sections.appendChild(div);
   });
@@ -76,8 +120,17 @@ function openModal(name) {
   var cta = document.createElement('div');
   cta.className = 'modal-section';
   cta.innerHTML = '<div class="modal-section-label">Case Study</div>' +
-    '<p class="modal-section-text"><a href="mailto:eyalyfat@gmail.com">Contact me for the case study →</a></p>';
+    '<p class="modal-section-text"><a href="mailto:eyalyfat@gmail.com">Contact me for the full case study →</a></p>';
   sections.appendChild(cta);
+
+  // Click a video thumbnail to load the player inline
+  sections.querySelectorAll('.modal-embed').forEach(function (el) {
+    el.addEventListener('click', function () {
+      var src = el.getAttribute('data-src');
+      if (!src) return;
+      el.innerHTML = '<iframe src="' + src + '" title="Video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+    });
+  });
 
   document.getElementById('modal').classList.add('open');
   document.body.style.overflow = 'hidden';
